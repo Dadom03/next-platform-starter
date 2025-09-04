@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Besties Helping Hands</title>
+  <meta name="description" content="Adult day program supporting autistic adults 18–40 in Cincinnati, Ohio." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --red: #FF3B30;
+      --green: #34C759;
+      --yellow: #FFCC00;
+      --blue: #007AFF;
+      --ink: #0b1220;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background: linear-gradient(120deg, rgba(255,59,48,.15) 0%, rgba(52,199,89,.15) 35%, rgba(255,204,0,.15) 65%, rgba(0,122,255,.15) 100%);
+    }
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      backdrop-filter: blur(3px);
+      background: rgba(5,8,15,0.70);
+    }
+    .grid-bg {
+      position: fixed; inset: 0; z-index: -1; opacity: .06;
+      background-image:
+        linear-gradient(to right, white 1px, transparent 1px),
+        linear-gradient(to bottom, white 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+    .ring-soft { box-shadow: 0 0 0 1px rgba(255,255,255,.10) inset; }
+    .brand-dot { width: .5rem; height: .5rem; border-radius: 9999px; display:inline-block; }
+  </style>
+</head>
+<body class="text-white min-h-screen">
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-black/70 text-white px-3 py-2 rounded">Skip to content</a>
+
+  <header class="sticky top-0 z-50 backdrop-blur border-b border-white/10 bg-black/30">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center gap-4 py-3">
+      <img src="images/bestieslogo.png" alt="Besties Helping Hands logo" class="h-10 w-auto" />
+      <button id="menuBtn" aria-label="Toggle menu" class="md:hidden ml-auto px-3 py-2 rounded-xl ring-soft">☰</button>
+      <nav id="nav" class="ml-auto hidden md:flex items-center gap-1" aria-label="Primary">
+        <a href="#about" class="px-3 py-2 rounded-xl text-sm font-medium hover:bg-white/10 transition relative">About</a>
+        <a href="#autism" class="px-3 py-2 rounded-xl text-sm font-medium hover:bg-white/10 transition relative">Autism</a>
+        <a href="#programs" class="px-3 py-2 rounded-xl text-sm font-medium hover:bg-white/10 transition relative">Programs</a>
+        <a href="#gallery" class="px-3 py-2 rounded-xl text-sm font-medium hover:bg-white/10 transition relative">Gallery</a>
+        <a href="#contact" class="px-3 py-2 rounded-xl text-sm font-medium hover:bg-white/10 transition relative">Contact</a>
+        <a href="#contact" class="md:ml-2 inline-block">
+          <button class="rounded-2xl px-4 py-2 text-sm font-semibold" style="background: var(--red)">Enroll / Contact</button>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="main" class="relative">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-8 py-12 md:py-20 items-center">
+      <div class="lg:col-span-6">
+        <h1 class="text-5xl font-black leading-tight">Adult day program</h1>
+        <p class="mt-4 text-lg text-white/85 max-w-prose">
+          We support autistic adults ages 18–40 to grow independence, build workplace and life skills, and belong in community. Cincinnati, Ohio.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#programs"><button class="rounded-2xl px-5 py-3 text-base font-semibold" style="background: var(--blue)">Explore Programs</button></a>
+          <a href="#contact"><button class="rounded-2xl px-5 py-3 text-base font-semibold" style="background: var(--green)">Book a Tour</button></a>
+        </div>
+        <div class="mt-6 grid grid-cols-3 gap-4 text-sm">
+          <div class="rounded-xl p-3 ring-soft bg-white/5">
+            <div class="h-1.5 w-10 rounded-full" style="background: var(--yellow)"></div>
+            <div class="mt-2 text-white/80"><span class="font-semibold">Hours:</span> Mon–Fri 8:00–18:00</div>
+          </div>
+          <div class="rounded-xl p-3 ring-soft bg-white/5">
+            <div class="h-1.5 w-10 rounded-full" style="background: var(--blue)"></div>
+            <div class="mt-2 text-white/80"><span class="font-semibold">Address:</span> Mid City Center · 1821 Summit Rd · Suite 203</div>
+          </div>
+          <div class="rounded-xl p-3 ring-soft bg-white/5">
+            <div class="h-1.5 w-10 rounded-full" style="background: var(--red)"></div>
+            <div class="mt-2 text-white/80"><span class="font-semibold">Phone:</span> (513) 302-2216</div>
+          </div>
+        </div>
+      </div>
+      <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+        <img src="images/gallery-1.jpg" alt="Life skills session" class="rounded-2xl h-52 w-full object-cover ring-soft" />
+        <img src="images/gallery-2.jpg" alt="Community outing" class="rounded-2xl h-52 w-full object-cover ring-soft" />
+        <img src="images/gallery-3.jpg" alt="Friendship and inclusion" class="rounded-2xl h-52 w-full object-cover ring-soft" />
+        <img src="images/gallery4.jpg" alt="On-site activities" class="rounded-2xl h-52 w-full object-cover ring-soft" />
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-14">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid md:grid-cols-[1fr_380px] gap-10 items-start">
+      <div>
+        <h2 class="text-3xl font-extrabold">About Besties Helping Hands</h2>
+        <p class="mt-4 text-white/85">Founded by Charlotte Best, a parent with lived experience. Our mission is practical growth with dignity and respect. We partner with families and we measure progress in real life outcomes.</p>
+        <div class="mt-6 grid sm:grid-cols-2 gap-4">
+          <div class="rounded-2xl bg-white/5 ring-soft p-5">
+            <div class="h-1.5 w-12 rounded-full" style="background: var(--red)"></div>
+            <h3 class="mt-3 font-semibold">One‑on‑one support</h3>
+            <p class="mt-1 text-sm text-white/75">Individual goals and pacing.</p>
+          </div>
+          <div class="rounded-2xl bg-white/5 ring-soft p-5">
+            <div class="h-1.5 w-12 rounded-full" style="background: var(--blue)"></div>
+            <h3 class="mt-3 font-semibold">Life skills training</h3>
+            <p class="mt-1 text-sm text-white/75">Cooking, budgeting, transit.</p>
+          </div>
+          <div class="rounded-2xl bg-white/5 ring-soft p-5">
+            <div class="h-1.5 w-12 rounded-full" style="background: var(--green)"></div>
+            <h3 class="mt-3 font-semibold">Job readiness</h3>
+            <p class="mt-1 text-sm text-white/75">Mock interviews, resumes, work habits.</p>
+          </div>
+          <div class="rounded-2xl bg-white/5 ring-soft p-5">
+            <div class="h-1.5 w-12 rounded-full" style="background: var(--yellow)"></div>
+            <h3 class="mt-3 font-semibold">Community & recreation</h3>
+            <p class="mt-1 text-sm text-white/75">Outings, fitness, creative arts.</p>
+          </div>
+        </div>
+      </div>
+      <div class="space-y-4">
+        <img src="images/founder-charlotte.jpg" alt="Founder Charlotte Best" class="rounded-2xl w-full object-cover h-[440px] ring-soft" />
+        <p class="text-xs text-white/60">Charlotte Best, Founder</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="autism" class="py-14 bg-black/30 border-y border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-extrabold">Autism-centered approach</h2>
+      <div class="mt-8 grid md:grid-cols-4 gap-6">
+        <div class="rounded-2xl p-6 ring-soft bg-white/5">
+          <div class="h-2 w-10 rounded-full" style="background: var(--blue)"></div>
+          <h3 class="mt-3 text-xl font-bold">Predictable routines</h3>
+          <p class="mt-1 text-white/75 text-sm">Visual schedules and clear transitions.</p>
+        </div>
+        <div class="rounded-2xl p-6 ring-soft bg-white/5">
+          <div class="h-2 w-10 rounded-full" style="background: var(--green)"></div>
+          <h3 class="mt-3 text-xl font-bold">Sensory support</h3>
+          <p class="mt-1 text-white/75 text-sm">Quiet zones and flexible seating.</p>
+        </div>
+        <div class="rounded-2xl p-6 ring-soft bg-white/5">
+          <div class="h-2 w-10 rounded-full" style="background: var(--yellow)"></div>
+          <h3 class="mt-3 text-xl font-bold">Communication</h3>
+          <p class="mt-1 text-white/75 text-sm">Plain language and AAC acceptance.</p>
+        </div>
+        <div class="rounded-2xl p-6 ring-soft bg-white/5">
+          <div class="h-2 w-10 rounded-full" style="background: var(--red)"></div>
+          <h3 class="mt-3 text-xl font-bold">Respect & autonomy</h3>
+          <p class="mt-1 text-white/75 text-sm">Choice-making and strengths focus.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="programs" class="py-14">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-extrabold">Programs</h2>
+      <div class="mt-8 grid lg:grid-cols-3 gap-6">
+        <div class="rounded-2xl p-6 ring-soft bg-white/5">
+          <div class="h-1.5 w-16 rounded-full" style="background: var(--green)"></div>
+          <h3 class="mt-3 text-xl font-bold">Life Skills Lab</h3>
+          <p class="mt-2 text-white/75 text-sm">Cooking labs, budgeting practice, transit training, personal care routines.</p>
+          <div class="mt-4"><a href="#contact"><button class="rounded-xl px-4 py-2 text-sm font-semibold" style="background: var(--red)">Ask about Life Skills Lab</button></a></div>
+        </div>
+        <div class="rounded-2xl p-6 ring-soft bg-white/5">
+          <div class="h-1.5 w-16 rounded-full" style="background: var(--blue)"></div>
+          <h3 class="mt-3 text-xl font-bold">Employment Prep</h3>
+          <p class="mt-2 text-white/75 text-sm">Resumes, mock interviews, workplace communication and routines.</p>
+          <div class="mt-4"><a href="#contact"><button class="rounded-xl px-4 py-2 text-sm font-semibold" style="background: var(--red)">Ask about Employment Prep</button></a></div>
+        </div>
+        <div class="rounded-2xl p-6 ring-soft bg-white/5">
+          <div class="h-1.5 w-16 rounded-full" style="background: var(--yellow)"></div>
+          <h3 class="mt-3 text-xl font-bold">Community Club</h3>
+          <p class="mt-2 text-white/75 text-sm">Weekly outings that build friendship, fitness, and inclusion.</p>
+          <div class="mt-4"><a href="#contact"><button class="rounded-xl px-4 py-2 text-sm font-semibold" style="background: var(--red)">Ask about Community Club</button></a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="py-14 bg-black/30 border-y border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-extrabold">Gallery</h2>
+      <p class="mt-2 text-white/75 text-sm">Tap to enlarge.</p>
+      <div class="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <button class="group relative rounded-2xl overflow-hidden ring-soft" data-img="images/gallery-1.jpg"><img src="images/gallery-1.jpg" alt="Gallery 1" class="h-40 w-full object-cover group-hover:scale-105 transition" /><span class="absolute inset-0 bg-black/0 group-hover:bg-black/15"></span></button>
+        <button class="group relative rounded-2xl overflow-hidden ring-soft" data-img="images/gallery-2.jpg"><img src="images/gallery-2.jpg" alt="Gallery 2" class="h-40 w-full object-cover group-hover:scale-105 transition" /><span class="absolute inset-0 bg-black/0 group-hover:bg-black/15"></span></button>
+        <button class="group relative rounded-2xl overflow-hidden ring-soft" data-img="images/gallery-3.jpg"><img src="images/gallery-3.jpg" alt="Gallery 3" class="h-40 w-full object-cover group-hover:scale-105 transition" /><span class="absolute inset-0 bg-black/0 group-hover:bg-black/15"></span></button>
+        <button class="group relative rounded-2xl overflow-hidden ring-soft" data-img="images/gallery4.jpg"><img src="images/gallery4.jpg" alt="Gallery 4" class="h-40 w-full object-cover group-hover:scale-105 transition" /><span class="absolute inset-0 bg-black/0 group-hover:bg-black/15"></span></button>
+        <button class="group relative rounded-2xl overflow-hidden ring-soft" data-img="images/gallery5.jpg"><img src="images/gallery5.jpg" alt="Gallery 5" class="h-40 w-full object-cover group-hover:scale-105 transition" /><span class="absolute inset-0 bg-black/0 group-hover:bg-black/15"></span></button>
+        <button class="group relative rounded-2xl overflow-hidden ring-soft" data-img="images/founders.JPG"><img src="images/founders.JPG" alt="Founders" class="h-40 w-full object-cover group-hover:scale-105 transition" /><span class="absolute inset-0 bg-black/0 group-hover:bg-black/15"></span></button>
+      </div>
+      <div id="lightbox" class="fixed inset-0 hidden items-center justify-center bg-black/80 p-6 z-50">
+        <img id="lightboxImg" src="" alt="Enlarged" class="max-h-[80vh] max-w-[90vw] rounded-2xl ring-soft" />
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-14 bg-black/30 border-y border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10">
+      <div>
+        <h2 class="text-3xl font-extrabold">Contact</h2>
+        <div class="mt-6 grid sm:grid-cols-2 gap-4 text-white/85 text-sm">
+          <div class="rounded-2xl p-4 ring-soft bg-white/5"><div class="font-semibold">Phone</div><a href="tel:+15133022216" class="underline decoration-dotted">(513) 302-2216</a></div>
+          <div class="rounded-2xl p-4 ring-soft bg-white/5"><div class="font-semibold">Email</div><a href="mailto:CharlotteBest503605@gmail.com" class="underline decoration-dotted">CharlotteBest503605@gmail.com</a></div>
+          <div class="rounded-2xl p-4 ring-soft bg-white/5 col-span-2"><div class="font-semibold">Address</div><p>Mid City Center · 1821 Summit Rd, Suite 203 · Cincinnati, OH 45237</p></div>
+          <div class="rounded-2xl p-4 ring-soft bg-white/5 col-span-2"><div class="font-semibold">Hours</div><p>Monday – Friday: 8:00 AM – 6:00 PM</p></div>
+        </div>
+      </div>
+      <form onsubmit="event.preventDefault(); window.location.href=buildMailto();" class="rounded-3xl p-6 ring-soft bg-white/5">
+        <h3 class="text-xl font-bold">Send a message</h3>
+        <div class="mt-4 grid grid-cols-1 gap-4">
+          <input required aria-label="Full name" placeholder="Full name" class="px-4 py-3 rounded-xl bg-black/40 ring-soft outline-none focus:ring-2 focus:ring-white/30" id="name"/>
+          <input required type="email" aria-label="Email" placeholder="Email" class="px-4 py-3 rounded-xl bg-black/40 ring-soft outline-none focus:ring-2 focus:ring-white/30" id="email"/>
+          <input aria-label="Phone" placeholder="Phone" class="px-4 py-3 rounded-xl bg-black/40 ring-soft outline-none focus:ring-2 focus:ring-white/30" id="phone"/>
+          <textarea required aria-label="Message" placeholder="How can we help?" rows="5" class="px-4 py-3 rounded-xl bg-black/40 ring-soft outline-none focus:ring-2 focus:ring-white/30" id="message"></textarea>
+          <div class="flex items-center gap-3 flex-wrap">
+            <button type="submit" class="rounded-2xl px-5 py-3 text-base font-semibold" style="background: var(--red)">Send</button>
+            <a href="https://maps.apple.com/?address=1821%20Summit%20Rd,%20Cincinnati,%20OH%2045237,%20United%20States&ll=39.171,-84.462" target="_blank" rel="noreferrer noopener">
+              <button type="button" class="rounded-2xl px-5 py-3 text-base font-semibold" style="background: var(--yellow); color: #111827">Open in Maps</button>
+            </a>
+          </div>
+          <p class="text-xs text-white/60">Submitting opens your email app with a prefilled message. No data is stored on this site.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="py-10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="rounded-3xl p-6 ring-soft overflow-hidden" style="background: linear-gradient(90deg, rgba(255,59,48,.15), rgba(52,199,89,.15), rgba(255,204,0,.15), rgba(0,122,255,.15))">
+        <div class="grid md:grid-cols-2 gap-6 items-center">
+          <div>
+            <h3 class="text-2xl font-extrabold">Ready to visit?</h3>
+            <p class="text-white/80 text-sm mt-1">Tour our space. Meet the team. See the autism-centered supports in action.</p>
+          </div>
+          <div class="md:justify-self-end">
+            <a href="#contact"><button class="rounded-2xl px-5 py-3 text-base font-semibold" style="background: var(--blue)">Schedule a tour</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-4 md:gap-6">
+      <img src="images/bestieslogo.png" alt="Besties Helping Hands logo" class="h-8 w-auto" />
+      <div class="text-sm text-white/70">© <span id="year"></span> Besties Helping Hands</div>
+      <div class="ml-auto flex items-center gap-2" aria-label="Brand colors">
+        <span class="brand-dot" style="background: var(--red)"></span>
+        <span class="brand-dot" style="background: var(--green)"></span>
+        <span class="brand-dot" style="background: var(--yellow)"></span>
+        <span class="brand-dot" style="background: var(--blue)"></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('menuBtn');
+    const nav = document.getElementById('nav');
+    btn?.addEventListener('click', () => nav.classList.toggle('hidden'));
+
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightboxImg');
+    document.querySelectorAll('[data-img]').forEach(el => {
+      el.addEventListener('click', () => {
+        lbImg.src = el.getAttribute('data-img');
+        lb.classList.remove('hidden');
+        lb.classList.add('flex');
+      });
+    });
+    lb.addEventListener('click', () => {
+      lb.classList.add('hidden');
+      lb.classList.remove('flex');
+    });
+    window.addEventListener('keydown', (e) => { if (e.key === 'Escape') { lb.classList.add('hidden'); lb.classList.remove('flex'); } });
+
+    function buildMailto() {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const message = document.getElementById('message').value;
+      const subject = encodeURIComponent(`Besties Inquiry from ${name || 'Website Visitor'}`);
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`);
+      return `mailto:CharlotteBest503605@gmail.com?subject=${subject}&body=${body}`;
+    }
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
